@@ -40,7 +40,6 @@ public class DBConnection {
                 connection.close();
             }
         } catch (SQLException e) {
-            e.printStackTrace();
         }
     }
 }
