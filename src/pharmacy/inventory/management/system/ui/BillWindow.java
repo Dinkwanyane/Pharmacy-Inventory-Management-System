@@ -4,14 +4,15 @@
  */
 package pharmacy.inventory.management.system.ui;
 
+import pharmacy.inventory.management.system.model.Sale;
+
 /**
  *
  * @author Dinkwanyane
  */
-class Session {
+public class BillWindow {
 
-    static Object getCurrentUser() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public BillWindow(Sale sale) {
     }
     
 }
