@@ -1,0 +1,35 @@
+# Compiled Java files
+*.class
+
+# Build folders
+target/
+build/
+out/
+
+# IDE files
+.idea/
+*.iml
+
+# NetBeans
+nbproject/private/
+build/
+nbbuild/
+dist/
+.nb-gradle/
+
+# VS Code
+.vscode/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# NetBeans private configuration
+nbproject/private/
+
+# Compiled files
+*.class
+
+# Build output
+build/
+dist/
