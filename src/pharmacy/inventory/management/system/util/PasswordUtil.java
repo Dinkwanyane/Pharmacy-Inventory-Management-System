@@ -1,0 +1,31 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package pharmacy.inventory.management.system.util;
+
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+/**
+ *
+ * @author Dinkwanyane
+ */
+public class PasswordUtil {
+    public static String hash(String plainText) {
+        try {
+            MessageDigest digest = MessageDigest.getInstance("SHA-256");
+            byte[] hashBytes = digest.digest(plainText.getBytes("UTF-8"));
+            StringBuilder sb = new StringBuilder();
+            for (byte b : hashBytes) {
+                sb.append(String.format("%02x", b));
+            }
+            return sb.toString();
+        } catch (NoSuchAlgorithmException | java.io.UnsupportedEncodingException e) {
+            throw new RuntimeException("Unable to hash password", e);
+        }
+    }
+
+    public static boolean matches(String plainText, String hashedText) {
+        return hash(plainText).equals(hashedText);
+    }
+}
