@@ -27,8 +27,10 @@ Thumbs.db
 # NetBeans private configuration
 nbproject/private/
 
-# Compiled files
-*.class
+/build/
+/dist/
+/nbproject/private/
+*.jar
 
 # Build output
 build/
